@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Port Scanner Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #007BFF;
+            text-align: center;
+            margin: 30px 0;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #333333;
+        }
+        .open-ports {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .open-ports ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .open-ports li {
+            padding: 8px;
+            background-color: #f2f2f2;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .open-ports li:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Port Scanner Result</h1>
+    <div class="open-ports">
+        <p>Open ports are:</p>
+        <ul>
+            {% for port in open_ports %}
+            <li>{{ port }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
